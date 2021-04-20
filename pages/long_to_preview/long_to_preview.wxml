@@ -1,0 +1,11 @@
+<view class="page">
+    <image class="bg_image" mode="widthFix" src="/images/bg_edit.png"></image>
+    <image bindtap="toIndex" class="to_top_index" src="/images/to_top_index.png"></image>
+    <view class="preview_1_title">九宫格拼图(点开图片有惊喜)</view>
+    <view class="preview_1_tip">需要发布2张以上长图，呈现效果才会显示中间缩略图</view>
+    <image class="long_preview_1" src="/images/long_preview_1.png"></image>
+    <view bindtap="toBack" class="btn_ft flex_center">返回拼长图</view>
+    <view class="preview_list flex_between">
+        <view bindtap="toPreview" class="preview_item" data-index="{{index}}" wx:for="{{9}}" wx:key="{{index}}"></view>
+    </view>
+</view>

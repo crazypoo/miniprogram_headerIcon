@@ -1,0 +1,153 @@
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 200rpx 0;
+    box-sizing: border-box;
+
+
+}
+
+page {
+    font-family: "Microsoft YaHei";
+}
+
+.flex_start {
+    display: flex;
+    align-items: center;
+}
+
+.flex_center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flex_end {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.flex_between {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.canvas {
+    width: 600px;
+    height: 500px;
+    position: fixed;
+    left: 500px;
+    bottom: 0;
+    z-index: 1000;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.hide_scroll::-webkit-scrollbar {
+    display: none;
+}
+
+.page_ft {
+    width: 750rpx;
+    height: 520rpx;
+    background-color: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    box-sizing: border-box;
+    overflow-x: scroll;
+}
+
+.page_temp>view {
+    width: 170rpx;
+    height: 170rpx;
+    font-size: 28rpx;
+    color: #afafaf;
+    margin-top: 48rpx;
+    margin-left: 24rpx;
+}
+
+.page_temp>view:first-child {
+    margin-left: 44rpx;
+}
+
+.btn_change_image,.btn_share {
+    width: 60rpx;
+    height: 90rpx;
+    position: fixed;
+    bottom: 32rpx;
+}
+
+.btn_change_image {
+    left: 86rpx;
+}
+
+.btn_share {
+    right: 86rpx;
+}
+
+.ft_def {
+    background-color: #ebebeb;
+}
+
+.ft_sel {
+    background-color: #e0ebff;
+}
+
+.to_top_index {
+    width: 188rpx;
+    height: 36rpx;
+    position: fixed;
+    left: 10rpx;
+    top: 6%;
+    padding: 10rpx;
+}
+
+.btn_save {
+    width: 320rpx;
+    height: 100rpx;
+    position: fixed;
+    bottom: 32rpx;
+    left: 216rpx;
+}
+
+.temp_small {
+    width: 170rpx;
+    height: 170rpx;
+}
+
+.bg_nine {
+    width: 750rpx;
+    height: 866rpx;
+}
+
+.btn_share_wrap {
+    width: 70rpx;
+    height: 100rpx;
+    position: fixed;
+    bottom: 30rpx;
+    right: 80rpx;
+    background-color: rgba(0,0,0,0);
+}
+
+.btn_share_wrap::after {
+    border: none;
+}
+
+.bg_image {
+    width: 750rpx;
+    height: 1334rpx;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -10;
+}

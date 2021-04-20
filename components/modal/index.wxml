@@ -1,0 +1,21 @@
+<view animation="{{animationData}}" class="mask" hidden="{{!showStatus}}">
+    <form bindsubmit="confirmFunc" class="dialog">
+        <view class="title" wx:if="{{title!==''}}">{{title}}</view>
+        <view class="content" wx:if="{{content!==''}}">
+            <text>{{content}}</text>
+        </view>
+        <view class="form" hidden="{{type!=='prompt'}}">
+            <block wx:for="{{items}}" wx:key="index">
+                <text>{{item.label}}</text>
+                <input name="{{item.name}}"></input>
+            </block>
+        </view>
+        <view class="diaBtn">
+            <button bindtap="cancelFunc" class="btn celbtn" hoverClass="btnHover" wx:if="{{showCancel}}">{{cancelText}}</button>
+            <button bindgetuserinfo="confirmFunc" class="btn cfirbtn" hoverClass="btnHover" openType="getUserInfo" wx:if="{{type==='getUserInfo'}}">{{confirmText}}</button>
+            <button class="btn cfirbtn" formType="submit" hoverClass="btnHover" wx:if="{{type==='prompt'}}">{{confirmText}}</button>
+            <button class="btn cfirbtn" data-type="modalShare" hoverClass="btnHover" openType="share" wx:if="{{type==='share'}}">{{confirmText}}</button>
+            <button bindtap="confirmFunc" class="btn cfirbtn" hoverClass="btnHover" wx:if="{{type===''||type==='openSetting'}}">{{confirmText}}</button>
+        </view>
+    </form>
+</view>

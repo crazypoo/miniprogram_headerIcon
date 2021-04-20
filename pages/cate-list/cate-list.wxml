@@ -1,0 +1,23 @@
+
+<view class="container">
+    <view class="header">
+        <view class="header-container" style="height:{{statusBarHeight+titleBarHeight}}px; margin-top:{{statusBarHeight-statusBarHeight/2}}px;">
+            <image bindtap="backToLastPage" class="header-image" src="/images/back.png"></image>
+            <text class="header-title">{{title}}</text>
+        </view>
+    </view>
+    <view class="body">
+        <view class="body-list">
+            <view bindtap="detailAction" class="body-list-container" data-img-one="{{item.img_one}}" data-img-two="{{item.img_two}}" wx:for="{{profileList}}" wx:key="profile">
+                <image class="body-list-image" src="{{item.img_one}}"></image>
+                <image class="body-list-image" src="{{item.img_two}}"></image>
+            </view>
+        </view>
+        <view class="show-more" hidden="{{!showMore}}">加载中...</view>
+        <view bindtap="backTop" class="back-top" hidden="{{!scroll}}">
+            <image src="/images/back-top.png"></image>
+        </view>
+    </view>
+
+   
+</view>

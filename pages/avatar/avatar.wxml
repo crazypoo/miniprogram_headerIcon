@@ -1,0 +1,34 @@
+<canvas canvasId="myCanvas" class="canvas"></canvas>
+<image class="bg_nine" mode="widthFix" src="/images/bg_nine.png"></image>
+<view class="img_box flex_center">
+    <image class="avatar" src="{{clip_square}}" wx:if="{{clip_square}}"></image>
+    <image class="avatar" src="{{rawData.avatarUrl}}" wx:else></image>
+    <block wx:if="{{barListName=='temp'}}">
+        <image class="avatar_temp_box" src="{{item.tmimg}}" wx:if="{{barItemIndex==index+1}}" wx:for="{{barItemData}}" wx:key="key"></image>
+    </block>
+    <block wx:if="{{barListName=='love'}}">
+        <image class="love_1" src="/images/love_1.png" wx:if="{{barItemIndex==1}}"></image>
+        <image class="love_2" src="/images/love_2.png" wx:elif="{{barItemIndex==2}}"></image>
+        <image class="love_3" src="/images/love_3.png" wx:elif="{{barItemIndex==3}}"></image>
+        <image class="love_4" src="/images/love_4.png" wx:elif="{{barItemIndex==4}}"></image>
+        <image class="love_4" src="/images/love_5.png" wx:elif="{{barItemIndex==5}}"></image>
+        <image class="love_4" src="/images/love_6.png" wx:elif="{{barItemIndex==6}}"></image>
+        <image class="love_4" src="/images/love_7.png" wx:elif="{{barItemIndex==7}}"></image>
+    </block>
+</view>
+<view class="page_ft">
+    <view class="bar_wrap flex_start">
+        <view bindtap="selBar" class="bar_wrap_sel def flex_center" data-index="{{index}}" data-type="{{item.type}}" wx:for="{{barList}}" wx:key="index">{{item.name}}</view>
+    </view>
+    <view class="temp_wrap flex_start">
+        <view bindtap="barItem" class="avatar_wrap" data-index="{{index}}" wx:for="{{barItemData}}" wx:key="index">
+            <image class="avatar_temp def" data-type="{{index+1}}" src="{{item.pagesimg}}"></image>
+            <view class="avatar_name flex_center">{{item.name}}</view>
+        </view>
+    </view>
+</view>
+<image bindtap="selImage" class="btn_change_image" src="/images/btn_change_image.png"></image>
+<image bindtap="btnSave" class="btn_save" src="/images/btn_save.png"></image>
+<image class="btn_share" src="/images/btn_share.png"></image>
+<image bindtap="ad_show" class="btn_save" src="/images/btn_save.png"></image>
+<button class="btn_share_wrap" openType="share"></button>

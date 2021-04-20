@@ -1,0 +1,36 @@
+canvas {
+    border: 1px solid lightgray;
+}
+
+.image_item {
+    width: 220rpx;
+    height: 220rpx;
+    margin-right: 1px;
+    display: block;
+    box-sizing: border-box;
+}
+
+.clip_square {
+    position: fixed;
+    left: 44rpx;
+    top: 3%;
+    width: 664rpx;
+    height: 664rpx;
+}
+
+.image_list {
+    position: fixed;
+    left: 44rpx;
+    top: 3%;
+    width: 666rpx;
+    height: 664rpx;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    box-shadow: 0 0 1px #888;
+}
+
+.ft_sel {
+    box-sizing: border-box;
+    border: 1px solid #ff5a5a;
+    background-color: #ebebeb;
+}

@@ -1,0 +1,152 @@
+.avatar {
+    width: 370rpx;
+    height: 370rpx;
+}
+
+.bg_nine {
+    width: 750rpx;
+    height: 866rpx;
+}
+
+.img_box {
+    width: 400rpx;
+    height: 400rpx;
+    position: fixed;
+    top: 10%;
+    left: 176rpx;
+    background-color: #fff;
+}
+
+.red_point,.num_point {
+    width: 70rpx;
+    height: 70rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.more_num_point {
+    width: 80rpx;
+    height: 70rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.v_1,.v_2 {
+    width: 70rpx;
+    height: 70rpx;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.avatar_temp_box {
+    width: 400rpx;
+    height: 400rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.avatar_temp_box_8 {
+    width: 83rpx;
+    height: 116rpx;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.page_ft {
+    position: fixed;
+    left: 0;
+    top: 51.3%;
+    width: 750rpx;
+}
+
+.bar_wrap {
+    width: 750rpx;
+    height: 88rpx;
+    font-size: 28rpx;
+    border-bottom: 1rpx solid #dedede;
+}
+
+.bar_wrap_sel {
+    height: 66rpx;
+    margin-left: 96rpx;
+}
+
+.bar_wrap_sel:first-child {
+    margin-left: 44rpx;
+}
+
+.bar_wrap .def {
+    color: #8f8f8f;
+    border-bottom: 2px solid rgba(155,136,136,0);
+}
+
+.bar_wrap .sel {
+    color: #8e5aff;
+    border-bottom: 2px solid #8e5aff;
+}
+
+.temp_wrap {
+    padding: 0 42rpx;
+    width: 750rpx;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+
+.avatar_temp {
+    width: 96rpx;
+    height: 96rpx;
+    box-sizing: border-box;
+}
+
+.avatar_wrap .sel {
+    border: 6rpx solid #ff5a5a;
+}
+
+.avatar_wrap {
+    width: 96rpx;
+    margin-left: 46rpx;
+    margin-top: 42rpx;
+    box-sizing: border-box;
+}
+
+.avatar_wrap:first-child {
+    margin-left: 0;
+}
+
+.avatar_wrap:nth-child(5n+1) {
+    margin-left: 0;
+}
+
+.avatar_name {
+    font-size: 20rpx;
+    color: #444;
+}
+
+.love_1 {
+    width: 94rpx;
+    height: 94rpx;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.love_2 {
+    width: 92rpx;
+    height: 98rpx;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.love_3,.love_4 {
+    width: 400rpx;
+    height: 400rpx;
+    position: absolute;
+    left: 0;
+    top: 0;
+}

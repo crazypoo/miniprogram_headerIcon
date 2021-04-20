@@ -1,0 +1,17 @@
+<view class="translator-wrapper">
+    <view class="translator-container" style="color: {{themeColor}}">
+    <ad unit-id="adunit-2129a9729406e008" ad-type="video" ad-theme="white"></ad>
+        <view catchtouchend="preventBuble" catchtouchstart="onLangChange" class="change-lang">
+            <image class="change-lang-icon" mode="aspectFit" src="/images/{{isCat?'dog_small.png':'cat3.png'}}" style="width: {{975/9.8}}rpx"></image>
+            <text class="change-lang-text">{{changeLangTips}}</text>
+        </view>
+        <view class="audio-wrapper">
+            <view catchtap="onVoiceTapped" class="audio-button" data-index="{{index}}" style="background: {{isCat?voiceIndex===index?'#FF95AC':'#FFB4C4':voiceIndex===index?'#66C8DE':'#94D9E9'}}" wx:for="{{audioList}}" wx:key="index">
+                <image class="play-icon" mode="widthFix" src="/images/player.png"></image>
+                <text class="audio-text">{{item}}</text>
+                <image class="pets-icon" mode="aspectFit" src="/images/{{isCat?'cat3.png':'dogjump.png'}}"></image>
+            </view>
+        </view>
+    </view>
+    <modal bind:complete="onComplete" confirmText="{{confirmText}}" content="{{content}}" formItems="{{items}}" showCancel="{{showCancel}}" showStatus="{{showModal}}" title="{{title}}" type="{{type}}"></modal>
+</view>

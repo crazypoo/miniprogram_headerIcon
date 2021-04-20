@@ -1,0 +1,29 @@
+<canvas canvasId="myCanvas" class="canvas"></canvas>
+<image class="bg_nine" mode="widthFix" src="/images/bg_nine.png"></image>
+<view class="box flex_between">
+    <block wx:for="{{9}}" wx:key="index">
+        <image bindtap="preview" class="peitu" data-url="https://img.bazhuay.com/{{selTempType}}_{{selTempIndex}}_{{index+1}}.jpg?t={{imageUrlVersion}}" src="https://img.bazhuay.com/{{selTempType}}_{{selTempIndex}}_{{index+1}}.jpg?t={{imageUrlVersion}}" wx:if="{{index!=4}}"></image>
+        <image bindtap="preview" class="peitu" data-url="https://img.bazhuay.com/{{selTempType}}_{{selTempIndex}}_{{index+1}}.png?t={{imageUrlVersion}}" src="https://img.bazhuay.com/{{selTempType}}_{{selTempIndex}}_{{index+1}}.png?t={{imageUrlVersion}}" wx:else></image>
+        <image bindtap="preview" class="peitu_my" data-url="{{myImg}}" src="{{myImg}}" wx:if="{{myImg}}"></image>
+        <image bindtap="selImage" class="peitu_my peitu_def" src="/images/add_image.png" wx:else></image>
+    </block>
+</view>
+<view class="page_ft hide_scroll">
+    <view class="bar_wrap flex_start">
+        <view bindtap="selBar" class="bar_wrap_sel {{item.status}} flex_center" data-index="{{index}}" data-type="{{item.type}}" wx:for="{{barList}}" wx:key="index">{{item.name}}</view>
+    </view>
+    <view class="page_temp">
+        <view class="flex_start" style="width:{{4*(170+24)+24+200}}rpx">
+            <view bindtap="selTemplate" class="flex_center ft_sel" data-index="{{index}}" wx:for="{{5}}" wx:key="index">
+                <image class="temp_small temp_small_sel" src="https://img.bazhuay.com/{{selTempType}}_{{index+1}}_10.jpg?t={{imageUrlVersion}}" wx:if="{{selTempIndex==index+1}}"></image>
+                <image class="temp_small temp_small_def" src="https://img.bazhuay.com/{{selTempType}}_{{index+1}}_10.jpg?t={{imageUrlVersion}}" wx:else></image>
+            </view>
+        </view>
+    </view>
+    <image bindtap="selImage" class="btn_change_image" src="/images/btn_change_image.png"></image>
+    <image bindtap="btnSave" class="btn_save" src="/images/btn_save.png"></image>
+    <image bindtap="btnSave1" class="btn_save" src="/images/btn_save.png"></image>
+    <image bindtap="btnSave2" class="btn_save" src="/images/btn_save.png"></image>
+    <image class="btn_share" src="/images/btn_share.png"></image>
+    <button class="btn_share_wrap" openType="share"></button>
+</view>

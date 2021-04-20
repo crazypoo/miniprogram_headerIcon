@@ -1,0 +1,68 @@
+.preview_1_title {
+    font-size: 30rpx;
+    color: #5d5d5d;
+    margin-top: 156rpx;
+    margin-left: 43rpx;
+}
+
+.preview_1_tip {
+    font-size: 24rpx;
+    color: #989898;
+    margin-top: 20rpx;
+    margin-left: 43rpx;
+}
+
+.long_preview_1 {
+    width: 664rpx;
+    height: 754rpx;
+    margin-top: 16rpx;
+    margin-left: 43rpx;
+}
+
+.preview_2_title {
+    font-size: 30rpx;
+    color: #5d5d5d;
+    margin-top: 40rpx;
+    margin-left: 43rpx;
+}
+
+.preview_2_tip {
+    font-size: 24rpx;
+    color: #989898;
+    margin-top: 24rpx;
+    margin-left: 43rpx;
+}
+
+.long_preview_2 {
+    width: 664rpx;
+    height: 432rpx;
+    margin-top: 14rpx;
+    margin-left: 43rpx;
+}
+
+.btn_ft {
+    width: 750rpx;
+    height: 98rpx;
+    background-color: #fff;
+    border-top: 1px solid #dfdfdf;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    font-size: 28rpx;
+    color: #8e5aff;
+}
+
+.preview_list {
+    width: 484rpx;
+    height: 484rpx;
+    position: absolute;
+    top: 490rpx;
+    left: 176rpx;
+    flex-wrap: wrap;
+}
+
+.preview_item {
+    width: 156rpx;
+    height: 156rpx;
+    margin-bottom: 10rpx;
+}

@@ -1,0 +1,56 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/translator/index",
+    "pages/long_to_preview/long_to_preview",
+    "pages/long_image/long_image",
+    "pages/word/word",
+    "pages/avatar/avatar",
+    "pages/nine/nine",
+    "pages/peitu/peitu",
+    "pages/detail/detail",
+    "pages/cate-list/cate-list",
+    "pages/clip_square/clip_square"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小迪头像",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#7A7E83",
+    "selectedColor": "#37d3a5",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+
+      {
+        "pagePath": "pages/cate-list/cate-list",
+        "text": "头像",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+
+
+
+
+
+
+
+      {
+        "pagePath": "pages/translator/index",
+        "text": "娱乐",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_selected.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

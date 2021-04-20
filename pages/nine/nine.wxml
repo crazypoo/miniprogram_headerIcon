@@ -1,0 +1,25 @@
+<canvas canvasId="myCanvas" class="canvas"></canvas>
+<image class="bg_nine" mode="widthFix" src="/images/bg_nine.png"></image>
+<image class="clip_square" src="{{clipSquare}}" wx:if="{{imageArray.length<9}}"></image>
+<view class="image_list flex_start">
+    <image bindtap="selImg" class="image_item" data-url="{{item.url}}" src="{{item.url}}" wx:if="{{imageArray.length>=9}}" wx:for="{{imageArray}}" wx:key="index"></image>
+</view>
+<view class="page_ft hide_scroll">
+    <view class="page_temp flex_start" style="width:{{(templateNum+1)*(170+24)+20+44}}rpx">
+        <view class="flex_center ft_sel" wx:if="{{selTemplate==0}}">原图</view>
+        <view bindtap="selTemplate" class="flex_center ft_def" data-index="0" wx:else>原图</view>
+        <block wx:for="{{templateNum}}" wx:key="index">
+            <view class="flex_center ft_sel" wx:if="{{selTemplate==index+1}}">
+                <image class="temp_small" src="/images/temp_{{index+1}}_no.png"></image>
+            </view>
+            <view bindtap="selTemplate" class="flex_center ft_def" data-index="{{index+1}}" wx:else>
+                <image class="temp_small" src="/images/temp_{{index+1}}_no.png"></image>
+            </view>
+        </block>
+    </view>
+    <image bindtap="selImage" class="btn_change_image" src="/images/btn_change_image.png"></image>
+    <image bindtap="btnSave" class="btn_save" src="/images/btn_save.png"></image>
+    <image bindtap="btnSave1" class="btn_save" src="/images/btn_save.png"></image>
+    <image class="btn_share" src="/images/btn_share.png"></image>
+    <button class="btn_share_wrap" openType="share"></button>
+</view>

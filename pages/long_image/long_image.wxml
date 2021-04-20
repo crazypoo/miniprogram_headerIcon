@@ -1,0 +1,28 @@
+<view class="page">
+    <image class="bg_image" mode="widthFix" src="/images/bg_edit.png"></image>
+    <image bindtap="toLongPreview" class="long_to_preview" src="/images/long_to_preview.png"></image>
+    <view class="tips_text">Tips：需要发布2张以上长图，呈现效果才会显示中间缩略图</view>
+    <block wx:if="{{longType==3}}">
+        <image class="long_3" src="/images/long_3_sel.png"></image>
+        <image bindtap="longType" class="long_5" data-type="5" src="/images/long_5_def.png"></image>
+    </block>
+    <block wx:else>
+        <image bindtap="longType" class="long_3" data-type="3" src="/images/long_3_def.png"></image>
+        <image class="long_5" src="/images/long_5_sel.png"></image>
+    </block>
+    <view class="long_image_list long_image_list_{{longType}}">
+        <block wx:for="{{longType}}" wx:key="{{index}}">
+            <image bindtap="selImage" class="long_show" data-index="{{index}}" src="{{longImage[index]}}" wx:if="{{longImage[index]}}"></image>
+            <image bindtap="selImage" class="long_show" data-index="{{index}}" src="/images/long_show.png" wx:elif="{{longType===3&&index===1||longType===5&&index===2}}"></image>
+            <view bindtap="selImage" class="long_image_item flex_center" data-index="{{index}}" wx:else>
+                <image class="long_add" src="/images/long_add.png"></image>
+            </view>
+        </block>
+    </view>
+    <view class="btn_ft_wrap flex_between">
+        <button bindtap="saveImage" class="btn_ft">保存拼图</button>
+        <button class="btn_ft" openType="share">分享好友</button>
+    </view>
+</view>
+<canvas canvasId="myCanvas" class="canvas"></canvas>
+<image class="long_tip_image" src="/images/long_tip_image.png" wx:if="{{longType===3&&longImage[1]||longType===5&&longImage[2]}}"></image>

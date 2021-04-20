@@ -1,0 +1,10 @@
+<image class="index_logo" src="/images/index_logo.png"></image>
+<image bindtap="toNine" class="index_item index_item_1" data-page="word" src="/images/index_item_1.png"></image>
+<image bindtap="toNine" class="index_item index_item_2" data-page="peitu" src="/images/index_item_2.png"></image>
+<image bindtap="toNine" class="index_item index_item_3" data-page="nine" src="/images/index_item_3.png"></image>
+<image bindtap="toNine" class="index_item index_item_4" data-page="avatar" src="/images/index_item_4.png"></image>
+<image bindtap="toNine" class="index_item index_item_5" data-page="long_image" src="/images/index_item_5.png"></image>
+<image class="bg_image" mode="widthFix" src="/images/bg_image.png"></image>
+<image class="index_bottom" src="/images/index_bottom.png"></image>
+<button class="feedback" openType="feedback"></button>
+<button class="share" openType="share"></button>

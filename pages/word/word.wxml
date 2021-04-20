@@ -1,0 +1,58 @@
+<image class="bg_image" mode="widthFix" src="/images/bg_edit.png"></image>
+<view class="page">
+    <view class="word_box flex_between">
+        <block wx:if="{{bgColorSel[1]===-1}}">
+            <view class="word_item flex_center" style="color:{{bgColor3[ bgColorSel[2] ]}};background-color:{{bgColor[ bgColorSel[0] ]}}" wx:for="{{9}}" wx:key="index">{{words[index]}}</view>
+        </block>
+        <block wx:else>
+            <view class="word_item flex_center" style="color:{{bgColor3[ bgColorSel[2] ]}}; background: url({{bgColor2[ bgColorSel[1] ]}}) no-repeat center center;" wx:for="{{9}}" wx:key="index">{{words[index]}}</view>
+        </block>
+    </view>
+    <view class="bd">
+        <view class="input_box flex_start">
+            <image class="icon_edit" src="/images/icon_edit.png"></image>
+            <input bindinput="confirmInput" class="input_word" maxlength="9" placeholder="{{words}}" placeholderClass="word_place"></input>
+            <view bindtap="changeWord" class="btn_change" data-words="{{wordsTemp}}">换一换</view>
+        </view>
+        <view class="bd_bg flex_start">
+            <image class="icon_canvas" src="/images/icon_canvas.png"></image>
+            <movable-area class="move_area flex_start">
+                <movable-view class="move_view flex_start" direction="horizontal" style="width:{{bgColor.length*72}}rpx;">
+                    <block wx:for="{{bgColor}}" wx:key="index">
+                        <view class="move_item move_item_sel" style="background-color:{{item}}" wx:if="{{index===bgColorSel[0]}}"></view>
+                        <view bindtap="selBgColor" class="move_item move_item_white" data-index="{{index}}" data-item="0" style="background-color:{{item}}" wx:elif="{{item=='#fff'}}"></view>
+                        <view bindtap="selBgColor" class="move_item" data-index="{{index}}" data-item="0" style="background-color:{{item}}" wx:else></view>
+                    </block>
+                </movable-view>
+            </movable-area>
+        </view>
+        <view class="bd_bg_2 flex_start">
+            <image class="icon_canvas icon_canvas_2" src="/images/icon_canvas.png"></image>
+            <movable-area class="move_area flex_start">
+                <movable-view class="move_view flex_start" direction="horizontal" style="width:{{bgColor2.length*72}}rpx;">
+                    <block wx:for="{{bgColor2}}" wx:key="index">
+                        <image class="move_item move_item_sel" src="{{item}}" wx:if="{{index===bgColorSel[1]}}"></image>
+                        <image bindtap="selBgColor" class="move_item" data-index="{{index}}" data-item="1" data-url="{{item}}" src="{{item}}" wx:else></image>
+                    </block>
+                </movable-view>
+            </movable-area>
+        </view>
+        <view class="bd_text flex_start">
+            <image class="icon_canvas" src="/images/icon_bg_text.png"></image>
+            <movable-area class="move_area flex_start">
+                <movable-view class="move_view flex_start" direction="horizontal" style="width:{{bgColor3.length*72}}rpx;">
+                    <block wx:for="{{bgColor3}}" wx:key="index">
+                        <view class="move_item move_item_sel" style="background-color:{{item}}" wx:if="{{index===bgColorSel[2]}}"></view>
+                        <view bindtap="selBgColor" class="move_item move_item_white" data-index="{{index}}" data-item="2" style="background-color:{{item}}" wx:elif="{{item=='#fff'}}"></view>
+                        <view bindtap="selBgColor" class="move_item" data-index="{{index}}" data-item="2" style="background-color:{{item}}" wx:else></view>
+                    </block>
+                </movable-view>
+            </movable-area>
+        </view>
+    </view>
+</view>
+<view class="btn_ft_wrap flex_between">
+    <button bindtap="saveImage" class="btn_ft">保存拼图</button>
+    <button class="btn_ft" openType="share">分享好友</button>
+</view>
+<canvas canvasId="myCanvas" class="canvas"></canvas>

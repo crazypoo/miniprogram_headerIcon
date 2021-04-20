@@ -1,0 +1,44 @@
+<view class="container">
+    <view class="header" style="height:{{statusBarHeight+titleBarHeight}}px; margin-top:{{statusBarHeight-statusBarHeight/2}}px;">
+        <image bindtap="backToLastPage" class="header-image" src="/images/back.png"></image>
+    </view>
+    <view class="body">
+        <view bindtap="previewImages" class="body-image-container">
+            <image class="body-image" src="{{img_one}}"></image>
+            <image class="body-image" src="{{img_two}}"></image>
+        </view>
+    </view>
+   
+    <view class="footer">
+        <view class="footer-body">
+            <view class="footer-container">
+               
+                 <view class="footer-container">
+                <f-button bindtap="saveImages" class="footer-icon">
+                    <image class="footer-icon" slot="img" src="/images/download.png"></image>
+                </f-button>
+                <view class="footer-title">保存</view>
+            </view>
+            
+
+            </view>
+            <view class="footer-container">
+                <f-button class="footer-icon" openType="share">
+                    <image class="footer-icon" slot="img" src="/images/share-tab.png"></image>
+                </f-button>
+                <view class="footer-title">分享</view>
+            </view>
+            
+           
+
+          
+
+
+
+
+
+
+
+        </view>
+    </view>
+</view>

@@ -1,0 +1,113 @@
+.avatar {
+    width: 370rpx;
+    height: 370rpx;
+}
+
+.test {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 500rpx;
+    height: 500rpx;
+}
+
+.bg_nine {
+    width: 750rpx;
+    height: 866rpx;
+}
+
+.img_box {
+    width: 400rpx;
+    height: 400rpx;
+    position: fixed;
+    top: 15.3%;
+    left: 176rpx;
+    background-color: #fff;
+}
+
+.red_point {
+    width: 80rpx;
+    height: 80rpx;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.bar_wrap {
+    width: 750rpx;
+    height: 88rpx;
+    font-size: 28rpx;
+    border-bottom: 1rpx solid #dedede;
+}
+
+.bar_wrap_sel {
+    height: 66rpx;
+    margin-left: 90rpx;
+}
+
+.bar_wrap_sel:first-child {
+    margin-left: 44rpx;
+}
+
+.bar_wrap .def {
+    color: #8f8f8f;
+    border-bottom: 2px solid rgba(0,0,0,0);
+}
+
+.bar_wrap .sel {
+    color: #8e5aff;
+    border-bottom: 2px solid #8e5aff;
+}
+
+.peitu {
+    width: 216rpx;
+    height: 216rpx;
+}
+
+.peitu_my {
+    width: 216rpx;
+    height: 212rpx;
+    position: absolute;
+    left: 226rpx;
+    top: 33.5%;
+    z-index: -10;
+}
+
+.peitu_def {
+    z-index: 200;
+}
+
+.box {
+    position: fixed;
+    top: 2%;
+    left: 42rpx;
+    flex-wrap: wrap;
+    width: 666rpx;
+}
+
+.box image {
+    margin-bottom: 8rpx;
+}
+
+.temp_small_def {
+    border: 1rpx solid #eee;
+    box-sizing: border-box;
+}
+
+.temp_small_sel {
+    border: 1rpx solid #ff5a5a;
+    box-sizing: border-box;
+}
+
+.page_temp {
+    overflow-x: scroll;
+    width: 750rpx;
+}
+
+.ft_sel {
+    margin-left: 24rpx;
+}
+
+.ft_sel:first-child {
+    margin-left: 0;
+}
